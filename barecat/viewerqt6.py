@@ -129,7 +129,7 @@ class BareCatViewer(QWidget):
         path = self.file_table.model().item(index.row(), 0).data(Qt.ItemDataRole.UserRole)
         content = self.file_reader[path]
         extension = osp.splitext(path)[1].lower()
-        if extension in ('.jpg', '.jpeg', '.png', '.gif', '.bmp'):
+        if extension in ('.jpg', '.jpeg', '.png', '.gif', '.bmp', '.webp'):
             byte_array = QByteArray(content)
             buffer = QBuffer(byte_array)
             imageReader = QImageReader()

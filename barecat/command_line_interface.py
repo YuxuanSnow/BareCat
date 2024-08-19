@@ -16,7 +16,7 @@ def create():
                         help='read input paths from stdin, separated by null bytes as output by '
                              'the find command with the -print0 option (otherwise newlines are '
                              'interpreted as delimiters)')
-    parser.add_argument('--workers', type=int, default=None)
+    parser.add_argument('--workers', type=int, default=8)
     parser.add_argument('--shard-size', type=str, default=None,
                         help='maximum size of a shard in bytes (if not specified, '
                              'all files will be concatenated into a single shard)')
