@@ -1,5 +1,9 @@
 # BareCat
 
+## Usage
+- `pip install tqdm`
+- `find . \( -name '*.webp' -o -name '*.png' \) -print0 | barecat-create --null --file mydata.barecat --shard-size 10G`
+
 BareCat (**bare**bones con**cat**enation) is a simple archive file format for storing many files,
 with focus on fast random access and minimal overhead.
 
