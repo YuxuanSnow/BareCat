@@ -385,22 +385,26 @@ class Index:
         self.close()
 
 
+# @contextlib.contextmanager
+# def transaction(cursor):
+#     succeeded = False
+#     try:
+#         cursor.execute('BEGIN TRANSACTION')
+#         yield
+#         succeeded = True
+#     finally:
+#         try:
+#             if succeeded:
+#                 cursor.execute('COMMIT')
+#             else:
+#                 cursor.execute('ROLLBACK')
+#         except sqlite3.OperationalError:
+#             # Transaction was not begun
+#             pass
+
 @contextlib.contextmanager
 def transaction(cursor):
-    succeeded = False
-    try:
-        cursor.execute('BEGIN TRANSACTION')
-        yield
-        succeeded = True
-    finally:
-        try:
-            if succeeded:
-                cursor.execute('COMMIT')
-            else:
-                cursor.execute('ROLLBACK')
-        except sqlite3.OperationalError:
-            # Transaction was not begun
-            pass
+    yield
 
 
 class PathAlreadyInBareCatError(Exception):
