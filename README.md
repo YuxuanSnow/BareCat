@@ -2,6 +2,7 @@
 
 ## Usage
 - `pip install tqdm`
+- `git clone https://github.com/isarandi/simplepyutils.git && cd simplepyutils && pip install .`
 - `find . \( -name '*.webp' -o -name '*.png' \) -print0 | barecat-create --null --file mydata.barecat --shard-size 10G`
 
 BareCat (**bare**bones con**cat**enation) is a simple archive file format for storing many files,
