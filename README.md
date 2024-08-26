@@ -5,6 +5,7 @@
 - `git clone https://github.com/isarandi/simplepyutils.git && cd simplepyutils && pip install .`
 - `pip install msgpack-numpy`
 - `python3 -m pip install PyQt6`
+- `pip install multiprocessing-utils`
 - `find . \( -name '*.webp' -o -name '*.png' \) -print0 | barecat-create --null --file mydata.barecat --shard-size 10G`
 - `find /lustre/fast/fast/zqiu/yxue80/RVH-123/2ndrendering \( -name '*.webp' \) -printf '%P\0' | barecat-create --null --file human_2nd.barecat --shard-size 100G` => use the absolute path to retrieve file names
 - `find . \( -name '*.webp' \) -print0 | barecat-create --null --file shapenetv1 --shard-size 150G`
