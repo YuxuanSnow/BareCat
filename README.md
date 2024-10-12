@@ -2,6 +2,7 @@
 
 ## Usage
 - `pip install tqdm`
+- `rm -rf simplepyutils`
 - `git clone https://github.com/isarandi/simplepyutils.git && cd simplepyutils && pip install .`
 - `pip install msgpack-numpy`
 - `python3 -m pip install PyQt6`
