@@ -10,6 +10,7 @@
 - `find . \( -name '*.webp' -o -name '*.png' \) -print0 | barecat-create --null --file mydata.barecat --shard-size 10G`
 - `find /lustre/fast/fast/zqiu/yxue80/RVH-123/2ndrendering \( -name '*.webp' \) -printf '%P\0' | barecat-create --null --file human_2nd.barecat --shard-size 100G` => use the absolute path to retrieve file names
 - `find . \( -name '*.webp' \) -print0 | barecat-create --null --file shapenetv1 --shard-size 150G`
+- `find . \( -name '*.jpg' ! -name '*_orig.jpg' \) -print0 | barecat-create --null --file UVtexture --shard-size 100G`: exclude specific files
 
 BareCat (**bare**bones con**cat**enation) is a simple archive file format for storing many files,
 with focus on fast random access and minimal overhead.
